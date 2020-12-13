@@ -10,6 +10,14 @@ module.exports = {
     ],
 
     themeConfig: {
+        repo: 'https://gitee.com/china-bin/vdesjs',
+        docsDir: 'docs',
+        docsBranch: 'docs',
+        editLinks: true,
+        editLinkText: '前往Gitee帮助我们改善此页面！',
+        lastUpdated: '上次更新与',
+        smoothScroll: true,
+
         nav: [
             { text: '主页', link: '/' },
             { text: '教程', link: '/guide/sxyl' },
@@ -36,6 +44,13 @@ module.exports = {
                     title: "目录结构",
                     collapsable: true,
                     path: "dir",
+                }
+            ],
+            '/cooperation/': [
+                {
+                    title: "贡献代码注意",
+                    collapsable: true,
+                    path: "devote",
                 }
             ]
         }

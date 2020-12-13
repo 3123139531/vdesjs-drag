@@ -4,7 +4,7 @@ heroImage: null
 heroText: vdesjs
 tagline: 基于vue的可视化拖拽，代码生成工具。
 actionText: 快速上手 →
-actionLink: /guide/
+actionLink: /guide/sxyl
 features:
 - title: 扩展性
   details: 提供详细的文档来帮助您理解我们工具的实现原理，并且您可以方便的基于vdesjs来扩展您自己的代码生成组件。
