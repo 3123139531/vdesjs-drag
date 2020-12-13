@@ -14,6 +14,7 @@ module.exports = {
             { text: '主页', link: '/' },
             { text: '教程', link: '/guide/sxyl' },
             { text: '关于我们', link: '/cooperation/' },
+            {text: '在线体验', link: 'http://china-bin.gitee.io/vdesjs/demo/'},
             { text: 'Github', link: 'https://github.com/china-bin/vdesjs' },
             { text: 'Gitee', link: 'https://gitee.com/china-bin/vdesjs' },
         ],
