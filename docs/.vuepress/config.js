@@ -1,4 +1,5 @@
 module.exports = {
+    base: '/vdesjs/',
     title: 'vdesjs',
     description: '基于vue的可视化拖拽，代码生成工具',
     head: [
