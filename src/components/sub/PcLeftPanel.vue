@@ -249,6 +249,9 @@ export default {
               },
             ],
           },
+          events: [
+           
+          ],
         },
         {
           name: "板块",
@@ -328,11 +331,10 @@ export default {
               label: "富文本中的html",
               key: "htmlValue",
               value: "",
-              type: "hidden"
-            }
-          ]
-
-        }
+              type: "hidden",
+            },
+          ],
+        },
       ],
       mediaComponents: [
         {

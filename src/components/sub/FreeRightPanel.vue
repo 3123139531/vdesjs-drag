@@ -3,6 +3,43 @@
     <el-tabs v-model="activeName">
       <el-tab-pane label="属性" name="prop">
         <div class="rightPanelItems" v-if="flag">
+          <el-row>
+            <el-col :span="10">x坐标:</el-col>
+            <el-col :span="14"
+              ><el-input
+                v-model="currentData.mStyle.left"
+                placeholder=""
+              ></el-input
+            ></el-col>
+          </el-row>
+          <el-row>
+            <el-col :span="10">y坐标:</el-col>
+            <el-col :span="14"
+              ><el-input
+                v-model="currentData.mStyle.top"
+                placeholder=""
+              ></el-input
+            ></el-col>
+          </el-row>
+          <el-row>
+            <el-col :span="10">宽度:</el-col>
+            <el-col :span="14"
+              ><el-input
+                v-model="currentData.mStyle.width"
+                placeholder=""
+              ></el-input
+            ></el-col>
+          </el-row>
+          <el-row>
+            <el-col :span="10">高度:</el-col>
+            <el-col :span="14"
+              ><el-input
+                v-model="currentData.mStyle.height"
+                placeholder=""
+              ></el-input
+            ></el-col>
+          </el-row>
+
           <div v-for="(item, i) in currentData.propValues" :key="i">
             <div v-if="item.type == 'text'">
               <el-row>
@@ -273,7 +310,7 @@
   </div>
 </template>
 <script>
-import event from "@/common/js/event"
+import event from "@/common/js/event";
 import Distance from "../pcomp/Distance.vue";
 import IconList from "../pcomp/IconList.vue";
 import ImageStore from "../pcomp/ImageStore.vue";
@@ -388,8 +425,9 @@ export default {
   },
   computed: {
     currentData() {
-      let data = this.$store.getters.currentData;
-      if (typeof data == "undefined") {
+      let data = this.$store.state.myItem;
+      console.log(data);
+      if (typeof data.id == "undefined") {
         this.flag = false;
         return { propValues: [] };
       } else {
@@ -425,7 +463,7 @@ export default {
     },
     addEvent: function () {
       let that = this;
-      var data = this.deepClone(this.actionAndFormData[this.actionValue])
+      var data = this.deepClone(this.actionAndFormData[this.actionValue]);
       let obj = {
         triggerEventValue: this.getTriggerEventValueObj(this.triggerEventValue),
         targetObjValue: this.getTargetObjValueObj(this.targetObjValue),
@@ -436,7 +474,7 @@ export default {
       obj = event.initMyFunction(obj);
       console.log(JSON.stringify(obj));
       this.$store.commit("addEvent", obj);
-      event.domToAddEventListner(obj)
+      event.domToAddEventListner(obj);
       // this.domToAddEventListner(obj);
 
       this.triggerEventValue = "";

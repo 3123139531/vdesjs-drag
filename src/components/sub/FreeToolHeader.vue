@@ -1,6 +1,21 @@
 <template>
   <el-row class="pcToolHeader" style="line-height: 30px">
     <el-col>
+      <el-link @click="compose"
+      :disabled="!areaData.components.length"
+        >组合组件<i class="el-icon-circle-plus-outline"></i>
+      </el-link>
+      <el-link @click="deCompose"
+      :disabled="!currentData || currentData.componentName != 'Group'"
+        >拆分组件<i class="el-icon-remove-outline"></i>
+      </el-link>
+       <el-link @click="revocation"
+        >撤销<i class="el-icon-d-arrow-left"></i>
+      </el-link>
+       <el-link @click="forward"
+        >恢复<i class="el-icon-d-arrow-right"></i>
+      </el-link>
+
       <el-link @click="deleteAll"
         >清空画布<i class="el-icon-delete"></i>
       </el-link>
@@ -60,7 +75,7 @@ import Clipboard from "clipboard";
 import { codemirror } from "vue-codemirror";
 import "codemirror/theme/ambiance-mobile.css"; // 这里引入的是主题样式，根据设置的theme的主题引入，一定要引入！！
 import "codemirror/mode/htmlmixed/htmlmixed"; // 这里引入的模式的js，根据设置的mode引入，一定要引入！！
-import handlebars from "@/handlebars/pcIndex.js";
+import handlebars from "@/handlebars/freeIndex.js";
 import { saveAs } from "file-saver";
 
 import curList from "@/mixins/curList";
@@ -91,8 +106,33 @@ export default {
 
   components: {
     codemirror,
-  },
+  }, 
   methods: {
+    revocation() {
+      if (this.hasRevocationSnaphot) {
+        this.$store.commit('revocation')
+      } else {
+        this.$message('没有历史记录')
+      }
+      
+
+    },
+    forward() {
+      if (this.hasForwardSnaphot) {
+         this.$store.commit('forward')
+      } else {
+        this.$message('没有历史记录')
+      }
+     
+    },
+    compose() {
+      // 组合组件
+      this.$store.commit('compose')
+    },
+    deCompose() {
+      // 拆分组件
+      this.$store.commit('decompose')
+    },
     deleteAll() {
       this.$confirm("确定清除画布?", "提示", {
         confirmButtonText: "确定",
@@ -114,7 +154,7 @@ export default {
     },
     generateCode() {
       this.codeDialogVisible = true;
-      var curHtmlCode = handlebars.generateHtmlCode(this.curList);
+      var curHtmlCode = handlebars.generateVueCode(this.curList);
       curHtmlCode = beautify_html(curHtmlCode);
       this.curHtmlCode = curHtmlCode;
 
@@ -185,11 +225,11 @@ export default {
 
     preview() {
       let routeData = this.$router.resolve({
-        path: "/pcPreview",
-        query: { id: 2 },
+        path: "/freePreview",
+        query: { id: 3},
       });
 
-      localStorage.setItem(2, JSON.stringify(this.curList));
+      localStorage.setItem(3, JSON.stringify(this.curList));
 
       window.open(routeData.href, "_blank");
     },
