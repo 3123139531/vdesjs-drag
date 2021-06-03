@@ -4,9 +4,9 @@ const Handlebars = require("handlebars");
 //basic
 let Navbar = require("./template/pc/basics/Navbar.html");
 let NavbarStyle = require("./template/pc/style/Navbar.html");
-let Swiper = require("./template/pc/media/Swiper.handlebars");
-let SwipperStyle = require("./template/pc/style/Swiper.handlebars");
-let SwiperJsCode = require("./template/pc/js/Swiper.handlebars");
+let Swiper = require("./template/pc/media/Swiper.html");
+let SwipperStyle = require("./template/pc/style/Swiper.html");
+let SwiperJsCode = require("./template/pc/js/Swiper.html");
 let PlateStyle = require("./template/pc/style/Plate.html");
 let RichText = require("./template/pc/basics/RichText.html");
 let ImageText = require("./template/pc/basics/ImageText.html");

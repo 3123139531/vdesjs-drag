@@ -4,11 +4,13 @@ const utils = require("./utils");
 const config = require("../config");
 const vueLoaderConfig = require("./vue-loader.conf");
 const webpack = require("webpack");
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
+
 function resolve(dir) {
   return path.join(__dirname, "..", dir);
 }
 const handlebarsHelpersPath = path.join(__dirname, "../src/handlebars/helpers");
-console.log(handlebarsHelpersPath,"handdd");
+console.log(handlebarsHelpersPath, "handdd");
 
 module.exports = {
   context: path.resolve(__dirname, "../"),
@@ -105,6 +107,8 @@ module.exports = {
       $: "jquery",
       jQuery: "jquery",
       "windows.jQuery": "jquery"
-    })
+    }),
+    new MonacoWebpackPlugin()
+    
   ]
 };
