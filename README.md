@@ -1,6 +1,6 @@
 中文 | [English](./README.en.md)
 
-<h1 align="center">vdesjs</h1>
+<h1 align="center">vdesjs-drag</h1>
 
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.1-blue.svg" />
@@ -14,7 +14,7 @@
 
 ## 介绍 :loudspeaker: :loudspeaker:
 
-> vdesjs是一款基于vue技术栈，可视化拖拽，代码生成工具。我们提供详细的文档来帮助您理解我们工具的实现原理，并且您可以方便的基于vdesjs来扩展您自己的代码生成组件。
+> vdesjs-drag
 
 <img src="./src/assets/showHow.gif" alt="演示动图" />
 
@@ -26,9 +26,9 @@
 | vuex                                                             | 状态管理工具(简单理解就是维护vue的公共变量，供全局使用)                                                                        |
 | [clipboard.js](https://github.com/zenorocha/clipboard.js)        | 将文本复制到剪贴板的插件                                                                                                       |
 | [element-ui](https://element.eleme.cn/#/zh-CN)                   | 基于Vue.js 2.0 的桌面端UI框架                                                                                                  |
-| [vant](https://vant-contrib.gitee.io/vant/)                      | 有赞前端团队开源的移动端组件库 (我们选择部分vant组件，将其作为vdesjs左侧拖拽组件)                                              |
-| [handlebars](https://github.com/handlebars-lang/handlebars.js)   | js模板引擎 (vdesjs左侧拖拽组件的代码生成模板选择handlebars作为模板引擎。如果想自己编写生成模板，可参照handlerbars语法进行编写) |
-| [vue-codemirror](https://github.com/surmon-china/vue-codemirror) | 代码编辑器(用其作为vdesjs代码显示的编辑器)                                                                                     |
+| [vant](https://vant-contrib.gitee.io/vant/)                      | 有赞前端团队开源的移动端组件库 (我们选择部分vant组件，将其作为vdesjs-drag左侧拖拽组件)                                              |
+| [handlebars](https://github.com/handlebars-lang/handlebars.js)   | js模板引擎 (vdesjs-drag左侧拖拽组件的代码生成模板选择handlebars作为模板引擎。如果想自己编写生成模板，可参照handlerbars语法进行编写) |
+| [vue-codemirror](https://github.com/surmon-china/vue-codemirror) | 代码编辑器(用其作为vdesjs-drag代码显示的编辑器)                                                                                     |
 |[file-save.js](https://github.com/eligrey/FileSaver.js)| 将代码下载至本地 |
 |[js-beautify](https://github.com/beautify-web/js-beautify)| 对生成的代码进行格式美化 |
 ## 项目目录结构
