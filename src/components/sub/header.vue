@@ -13,7 +13,7 @@
           <free-tool-header v-if="mode == 'free'"></free-tool-header>
         </div>
       </el-col>
-      <el-col :span="5">
+      <el-col :span="7">
         <div class="device">
           <span>模式切换：</span>
           <el-select size="mini" v-model="deviceMode" @change="selectDevice">
@@ -21,22 +21,6 @@
             <el-option value="pc">pc响应式</el-option>
              <el-option value="free">自由画布</el-option>
           </el-select>
-        </div>
-      </el-col>
-      <el-col :span="3">
-        <div class="contentLink">
-          <el-link
-            href="https://gitee.com/china-bin/vdesjs"
-            target="_blank"
-            type="primary"
-            >码云</el-link
-          >
-          <el-link
-            href="https://github.com/china-bin/vdesjs"
-            target="_blank"
-            type="primary"
-            >Github</el-link
-          >
         </div>
       </el-col>
     </el-row>
@@ -73,7 +57,7 @@ export default {
       } else {
         this.$store.commit("selectDevice", val);
       }
-      
+
     },
   },
 };
