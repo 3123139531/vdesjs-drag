@@ -3,7 +3,7 @@
     <el-row>
       <el-col :span="6">
         <div class="contentLogo">
-          <h2>vdesjs</h2>
+          <h2>Lazyhands</h2>
         </div>
       </el-col>
       <el-col :span="10">
