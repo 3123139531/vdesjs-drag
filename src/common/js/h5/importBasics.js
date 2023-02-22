@@ -32,8 +32,8 @@ let basics = {
         }
 
     }
-        
-   
+
+
 }
 
 export default basics

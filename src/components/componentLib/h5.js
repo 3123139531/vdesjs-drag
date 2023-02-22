@@ -74,6 +74,57 @@ export const basicCompoents = [
     ]
   },
   {
+    name: "按钮",
+    id: "唯一值",
+    componentName: "VanButton",
+    mStyle: {},
+    mClass: [],
+    propValues: [
+      {
+        label: "标题",
+        key: "title",
+        value: "按钮",
+        type: "text"
+      },
+      {
+        label: "按钮类型",
+        key: "type",
+        type: "select",
+        value: {
+          chooseValue: "",
+          data: [
+            {
+              value: "primary",
+              label: "主要按钮"
+            },
+            {
+              value: "info",
+              label: "信息按钮"
+            },
+            {
+              value: "default",
+              label: "默认按钮"
+            },
+            {
+              value: "warning",
+              label: "警告按钮"
+            },
+            {
+              value: "danger",
+              label: "危险按钮"
+            }
+          ]
+        }
+      },
+      {
+        label: "按钮颜色",
+        key: "color",
+        type: "color",
+        value: "#656262"
+      }
+    ]
+  },
+  {
     name: "布局",
     id: "唯一值",
     componentName: "VanLayout",
