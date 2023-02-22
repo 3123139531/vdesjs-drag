@@ -332,6 +332,13 @@ const store = new Vuex.Store({
             };
             state.list[state.currentSelectListIndex].cols.push(col)
         },
+       layoutAddCols1(state) {
+        var col = {
+          span: 130,
+          list: [],
+        };
+        state.list[state.currentSelectListIndex].cols.push(col)
+      },
 
         //清空数据
         deleteAll(state) {
