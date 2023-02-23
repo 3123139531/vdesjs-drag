@@ -34,7 +34,7 @@
           <el-row>
             <el-col :span="10">{{ item.label }}:</el-col>
             <el-col :span="14">
-              <el-select v-model="item.value.chooseValue" placeholder="请选择">
+              <el-select v-model="item.value.chooseValue" placeholder="默认按钮">
                 <el-option
                   v-for="it in item.value.data"
                   :key="it.value"

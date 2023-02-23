@@ -6,6 +6,8 @@
   >
 </template>
 <script>
+import router from "../../../router";
+
 export default {
   props: {
     myItem: {},
@@ -16,6 +18,7 @@ export default {
       titleIndex: 0,
       typeIndex: 1,
       colorIndex: 2,
+      chooseValue: 0
     };
   },
 };
