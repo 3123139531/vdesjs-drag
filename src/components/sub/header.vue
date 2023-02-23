@@ -39,6 +39,7 @@ export default {
   },
   data() {
     return {
+      curMode: "h5",
       deviceMode: "h5",
     };
   },
@@ -51,10 +52,12 @@ export default {
     selectDevice(val) {
       console.log(val);
       if (this.$store.state.list.length != 0) {
+        this.deviceMode = this.curMode
         this.$message('画布中有数据不能进行模式的切换，否则由于 v-if标签会产生缓存，导致出bug');
         console.log('画布中有数据不能进行模式的切换，否则由于 v-if标签会产生缓存，导致出bug')
         return false;
       } else {
+        this.curMode = val;
         this.$store.commit("selectDevice", val);
       }
 

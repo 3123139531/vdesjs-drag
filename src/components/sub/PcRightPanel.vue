@@ -30,7 +30,7 @@
                 <el-col :span="14">
                   <el-select
                     v-model="item.value.chooseValue"
-                    placeholder="请选择"
+                    placeholder="pc按钮"
                   >
                     <el-option
                       v-for="it in item.value.data"

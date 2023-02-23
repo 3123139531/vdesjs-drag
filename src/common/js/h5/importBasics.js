@@ -14,7 +14,6 @@ import VanImageLogo from "@/assets/h5/basics/图片.png"
 import Form from"@/components/h5/basics/Form.vue"
 import FormLogo from "@/assets/h5/basics/表格.png"
 
-
 let basics = {
     components: {
         VanButton,

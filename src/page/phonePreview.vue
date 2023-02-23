@@ -15,7 +15,9 @@
       <draggable :list="list" group="components" class="draggableDiv">
         <div v-for="(item, i) in list" :key="i" class="content">
           <div v-if="item.componentName == 'VanLayout'">
-            <van-layout :listIndex="i"></van-layout>
+            <van-layout :listIndex="i"
+                        @click.native="switchIndex(i)"
+              ></van-layout>
           </div>
           <component
             @click.native="switchIndex(i)"

@@ -34,7 +34,7 @@
           <el-row>
             <el-col :span="10">{{ item.label }}:</el-col>
             <el-col :span="14">
-              <el-select v-model="item.value.chooseValue" placeholder="请选择">
+              <el-select v-model="item.value.chooseValue" placeholder="默认按钮">
                 <el-option
                   v-for="it in item.value.data"
                   :key="it.value"
@@ -196,13 +196,23 @@ export default {
   },
   methods: {
     addCols: function () {
-      this.$store.commit("layoutAddCols");
+      var col = {
+        span: 8,
+        list: [],
+      };
+      this.currentData.cols.push(col)
+      //this.$store.commit("layoutAddCols");
     },
     addCols1:function () {
-      this.$store.commit("layoutAddCols1");
+      var col = {
+        span: 130,
+        list: [],
+      };
+      this.currentData.cols.push(col)
     },
     deleteThisCol: function (i) {
       this.currentData.cols.splice(i, 1);
+
     },
     removeThis: function () {
       this.$store.commit("deleteMyItem");
