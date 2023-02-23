@@ -330,6 +330,7 @@ const store = new Vuex.Store({
                 span: 1,
                 list: [],
             };
+            console.log("debugg"+state.currentSelectListIndex)
             state.list[state.currentSelectListIndex].cols.push(col)
         },
        layoutAddCols1(state) {
