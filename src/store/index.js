@@ -247,6 +247,7 @@ const store = new Vuex.Store({
         },
 
         updateMyItem(state, payload) {
+            console.log(payload)
             state.myItem = payload
         },
         updatemyItemStyle(state, { left, top, width, height, rotate }) {
@@ -255,8 +256,6 @@ const store = new Vuex.Store({
             if (width) state.myItem.mStyle.width = width
             if (height) state.myItem.mStyle.height = height
             if (rotate) state.myItem.mStyle.rotate = rotate
-
-
 
         },
         updateMyItemSingleStyle(state, { key, value }) {
@@ -302,6 +301,7 @@ const store = new Vuex.Store({
         },
         //切换当前选择元素下标
         swithIndex(state, payload) {
+            console.log(payload)
             state.currentSelectListIndex = payload
             state.currentColIndex = -1
             state.currentColDataIndex = -1

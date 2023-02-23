@@ -196,13 +196,23 @@ export default {
   },
   methods: {
     addCols: function () {
-      this.$store.commit("layoutAddCols");
+      var col = {
+        span: 8,
+        list: [],
+      };
+      this.currentData.cols.push(col)
+      //this.$store.commit("layoutAddCols");
     },
     addCols1:function () {
-      this.$store.commit("layoutAddCols1");
+      var col = {
+        span: 130,
+        list: [],
+      };
+      this.currentData.cols.push(col)
     },
     deleteThisCol: function (i) {
       this.currentData.cols.splice(i, 1);
+
     },
     removeThis: function () {
       this.$store.commit("deleteMyItem");
