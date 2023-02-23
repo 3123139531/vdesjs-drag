@@ -54,6 +54,23 @@
             </el-col>
           </el-row>
         </div>
+        <div v-if="item.type === 'col-form'">
+          <el-row>
+            <el-col :span="10">{{ item.label }}:</el-col>
+            <el-col :span="14">
+              <div v-for="(c, i) in currentData.cols" :key="i">
+                <el-input-number
+                  v-model="c.span"
+                  :min="1"
+                  :max="500"
+                  size="mini"
+                ></el-input-number>
+                <i class="el-icon-remove-outline" @click="deleteThisCol(i)"></i>
+              </div>
+              <p class="removeCol" @click="addCols1">添加列</p>
+            </el-col>
+          </el-row>
+        </div>
         <div v-if="item.type == 'col'">
           <el-row>
             <el-col :span="10">{{ item.label }}:</el-col>
@@ -62,7 +79,7 @@
                 <el-input-number
                   v-model="c.span"
                   :min="1"
-                  :max="24"
+                  :max="500"
                   size="mini"
                 ></el-input-number>
                 <i class="el-icon-remove-outline" @click="deleteThisCol(i)"></i>
@@ -180,6 +197,9 @@ export default {
   methods: {
     addCols: function () {
       this.$store.commit("layoutAddCols");
+    },
+    addCols1:function () {
+      this.$store.commit("layoutAddCols1");
     },
     deleteThisCol: function (i) {
       this.currentData.cols.splice(i, 1);

@@ -11,7 +11,8 @@ import VanIconLogo from "@/assets/h5/basics/图标.png"
 import VanImage from"@/components/h5/basics/VanImage.vue"
 import VanImageLogo from "@/assets/h5/basics/图片.png"
 
-
+import Form from"@/components/h5/basics/Form.vue"
+import FormLogo from "@/assets/h5/basics/表格.png"
 
 
 let basics = {
@@ -19,7 +20,8 @@ let basics = {
         VanButton,
         VanCell,
         VanIcon,
-        VanImage
+        VanImage,
+        Form
     },
     data() {
         return {
@@ -27,13 +29,14 @@ let basics = {
                 "VanButton": VanButtonLogo,
                 "VanCell": VanCellLogo,
                 "VanIcon": VanIconLogo,
-                "VanImage": VanImageLogo
+                "VanImage": VanImageLogo,
+                "Form": FormLogo
             }
         }
 
     }
-        
-   
+
+
 }
 
 export default basics

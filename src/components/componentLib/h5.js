@@ -23,6 +23,37 @@
 
 export const basicCompoents = [
   {
+    name:"表格",
+    id: "唯一值",
+    componentName: "Form",
+    mStyle: {},
+    mClass: [],
+    tableData: [
+    ],
+    propValues: [
+      {
+        label: "配置表格列",
+        key: "col",
+        value: "正真的值在cols中",
+        type: "col-form"
+      }
+    ],
+    cols: [
+      {
+        span: 130,
+        list: []
+      },
+      {
+        span: 130,
+        list: []
+      },
+      {
+        span: 130,
+        list: []
+      }
+    ]
+  },
+  {
     name: "按钮",
     id: "唯一值",
     componentName: "VanButton",
