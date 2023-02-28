@@ -4,7 +4,7 @@ let VanButton = require("./template/h5/basic/VanButton.html")
 let VanCell = require("./template/h5/basic/VanCell.html")
 let VanIcon = require("./template/h5/basic/VanIcon.html")
 let VanImage = require("./template/h5/basic/VanImage.html")
-
+let Form = require("./template/h5/basic/Form.html")
 //form
 let VanCheckbox = require("./template/h5/form/Vancheckbox.html")
 let VanCalendar = require("./template/h5/form/VanCalendar.html")
@@ -38,6 +38,7 @@ let compoentTexts = {
     "VanNoticebar": VanNoticebar,
     "VanSwiper": VanSwiper,
     "VanGrid": VanGrid,
+    "Form": Form,
 }
 
 let compentMethods = {
