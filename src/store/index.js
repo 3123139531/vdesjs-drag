@@ -206,7 +206,6 @@ const store = new Vuex.Store({
         setCurComponent(state, { component, index }) {
             state.myItem = component
             state.currentSelectListIndex = index
-
         },
         batchDeleteComponent(state, deleteData) {
             deleteData.forEach(component => {
@@ -327,17 +326,17 @@ const store = new Vuex.Store({
         },
         layoutAddCols(state) {
             var col = {
-                span: 1,
+                span: 8,
                 list: [],
             };
-            state.list[state.currentSelectListIndex].cols.push(col)
+            state.list[state.currentSelectListIndex].cols.push(col);
         },
        layoutAddCols1(state) {
-        var col = {
-          span: 130,
-          list: [],
-        };
-        state.list[state.currentSelectListIndex].cols.push(col)
+            var col = {
+              span: 130,
+              list: [],
+            };
+            state.list[state.currentSelectListIndex].cols.push(col)
       },
 
         //清空数据

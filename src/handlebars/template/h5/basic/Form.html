@@ -1,0 +1,12 @@
+<el-table
+  data="{{myItem.tableData}}"
+  style="width: 100%">
+  {{#each myItem.cols}}
+  <el-table-column
+    prop="date"
+    label="列"
+    width="{{span}}"
+  >
+  </el-table-column>
+  {{/each}}
+</el-table>

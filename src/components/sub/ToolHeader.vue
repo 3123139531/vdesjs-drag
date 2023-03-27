@@ -31,9 +31,9 @@
           <codemirror style="text-align: left !important;" :value="curVueCode" :options="cmOptions" class="code">
           </codemirror>
         </el-tab-pane>
-        <el-tab-pane label="html代码" name="htmlCode"
+        <!--<el-tab-pane label="html代码" name="htmlCode"
           >功能正在开发中，敬请期待</el-tab-pane
-        >
+        >-->
       </el-tabs>
       <span slot="footer" class="dialog-footer">
         <el-button @click="codeDialogVisible = false">取 消</el-button>
