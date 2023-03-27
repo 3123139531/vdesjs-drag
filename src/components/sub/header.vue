@@ -1,12 +1,12 @@
 <template>
   <div>
     <el-row>
-      <el-col :span="6">
+      <el-col :span="5">
         <div class="contentLogo">
           <h2>Lazyhands</h2>
         </div>
       </el-col>
-      <el-col :span="10">
+      <el-col :span="12">
         <div class="tool">
           <tool-header v-if="mode == 'h5'"></tool-header>
           <pc-tool-header v-if="mode == 'pc'"></pc-tool-header>
@@ -16,9 +16,9 @@
       <el-col :span="7">
         <div class="device">
           <span>模式切换：</span>
-          <el-select size="mini" v-model="deviceMode" @change="selectDevice">
-            <el-option value="h5">h5</el-option>
-            <el-option value="pc">pc响应式</el-option>
+          <el-select size="mini" v-model="devMode" @change="selectDevice">
+            <el-option value="h5">移动端画布</el-option>
+            <el-option value="pc">PC画布</el-option>
              <el-option value="free">自由画布</el-option>
           </el-select>
         </div>
@@ -47,6 +47,13 @@ export default {
     mode() {
       return this.$store.state.mode;
     },
+    devMode(){
+      switch(this.curMode){
+        case 'h5': return '移动端'
+        case 'pc': return 'PC端'
+        case 'free': return '自由画布'
+      }
+    }
   },
   methods: {
     selectDevice(val) {
@@ -84,6 +91,7 @@ export default {
   display: flex;
   align-items: center;
   height: 60px;
+  margin-top: 5px;
 }
 .el-link {
   margin-left: 10px;

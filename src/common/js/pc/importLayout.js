@@ -1,8 +1,8 @@
 import Plate from "@/components/pc/basics/Plate.vue";
-import PlateLogo from "@/assets/pc/basics/图文.png";
+import PlateLogo from "@/assets/pc/basics/板块.png";
 
 import PcLayout from "@/components/pc/basics/PcLayout.vue";
-import PcLayoutLogo from "@/assets/pc/basics/图文.png";
+import PcLayoutLogo from "@/assets/pc/basics/布局.png";
 
 let layout = {
     components: {

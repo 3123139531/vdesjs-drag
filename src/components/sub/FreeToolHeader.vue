@@ -1,14 +1,14 @@
 <template>
   <el-row class="pcToolHeader" style="line-height: 30px">
     <el-col>
-      <el-link @click="compose"
+      <!-- <el-link @click="compose"
       :disabled="!areaData.components.length"
         >组合组件<i class="el-icon-circle-plus-outline"></i>
       </el-link>
       <el-link @click="deCompose"
       :disabled="!currentData || currentData.componentName != 'Group'"
         >拆分组件<i class="el-icon-remove-outline"></i>
-      </el-link>
+      </el-link> -->
        <el-link @click="revocation"
         >撤销<i class="el-icon-d-arrow-left"></i>
       </el-link>

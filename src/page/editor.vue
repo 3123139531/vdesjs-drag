@@ -128,6 +128,7 @@ body {
   padding: 0px;
   margin: 0px;
   height: calc(100vh - 85px);
+  background-color: rgba(144, 144, 144, 0.2);
 }
 .leftAside {
   background-color: white;
@@ -193,5 +194,6 @@ body {
   overflow: hidden;
   height: calc(100vh - 85px);
   position: relative;
+  padding: 10px;
 }
 </style>
